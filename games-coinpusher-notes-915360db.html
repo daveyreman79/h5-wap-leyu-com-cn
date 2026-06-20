@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>关于推币机 · 日常查阅笔记</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(145deg, #fce7d7 0%, #f9d7c2 50%, #f3cab4 100%);
+      min-height: 100vh;
+      font-family: 'Segoe UI', system-ui, -apple-system, Roboto, 'Helvetica Neue', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1.5rem;
+      color: #3a2e2a;
+      line-height: 1.7;
+    }
+
+    .page-card {
+      max-width: 820px;
+      width: 100%;
+      background: #fffaf7;
+      border-radius: 36px;
+      padding: 2.8rem 2.5rem;
+      box-shadow: 0 12px 28px rgba(130, 70, 40, 0.12), 0 4px 12px rgba(180, 100, 60, 0.08);
+      transition: box-shadow 0.25s ease;
+    }
+
+    @media (max-width: 540px) {
+      body {
+        padding: 1.2rem 0.8rem;
+      }
+      .page-card {
+        padding: 1.8rem 1.2rem;
+        border-radius: 28px;
+      }
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: #4b3327;
+      margin-bottom: 0.3rem;
+      border-left: 5px solid #e0a78b;
+      padding-left: 1.2rem;
+    }
+
+    .lead {
+      font-size: 1.1rem;
+      color: #6c5547;
+      margin-bottom: 2.2rem;
+      padding: 0.6rem 0 0.6rem 1.2rem;
+      border-left: 2px dashed #dbb09b;
+      background: rgba(240, 218, 200, 0.2);
+      border-radius: 0 12px 12px 0;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin: 2rem 0 0.8rem 0;
+      color: #4f382c;
+      border-bottom: 1px solid #e9d4c6;
+      padding-bottom: 0.35rem;
+    }
+
+    p {
+      margin-bottom: 1.25rem;
+      text-rendering: optimizeLegibility;
+    }
+
+    .insight-quote {
+      background: #f7eee9;
+      border-radius: 20px;
+      padding: 1.2rem 1.6rem;
+      margin: 1.8rem 0;
+      font-style: normal;
+      position: relative;
+      box-shadow: inset 0 1px 5px rgba(170, 120, 90, 0.06);
+      border-left: 6px solid #dba88b;
+    }
+
+    .insight-quote::before {
+      content: "📌 延伸笔记";
+      display: block;
+      font-weight: 600;
+      font-size: 0.9rem;
+      letter-spacing: 0.03em;
+      color: #846354;
+      margin-bottom: 0.4rem;
+    }
+
+    .insight-quote p {
+      margin-bottom: 0.2rem;
+    }
+
+    .inline-link {
+      color: #965f44;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 2px solid #eacbbc;
+      padding-bottom: 1px;
+      transition: border-color 0.18s, color 0.2s;
+    }
+
+    .inline-link:hover {
+      color: #7b4a31;
+      border-bottom-color: #a5745b;
+    }
+
+    .button-round {
+      display: inline-block;
+      background: #e3c3b0;
+      color: #422f26;
+      padding: 0.6rem 1.8rem;
+      border-radius: 60px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      text-decoration: none;
+      border: none;
+      transition: background 0.2s, transform 0.1s;
+      box-shadow: 0 3px 6px rgba(130, 70, 40, 0.08);
+      letter-spacing: 0.01em;
+    }
+
+    .button-round:hover {
+      background: #dbb49b;
+      transform: scale(1.01);
+      box-shadow: 0 5px 10px rgba(140, 80, 50, 0.12);
+    }
+
+    .faq-mini {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      margin: 2rem 0 0.8rem 0;
+    }
+
+    .faq-item {
+      background: #fcf6f2;
+      border-radius: 24px;
+      padding: 1rem 1.5rem;
+    }
+
+    .faq-q {
+      font-weight: 600;
+      color: #4b3428;
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+
+    .faq-a {
+      color: #5d4a3e;
+      margin-left: 0.1rem;
+    }
+
+    .visit-line {
+      margin-top: 2.5rem;
+      padding: 1.2rem 1.6rem;
+      background: #f2e6de;
+      border-radius: 60px;
+      text-align: center;
+      font-size: 1.05rem;
+      border: 1px solid #e6d2c4;
+      color: #3b2b22;
+    }
+
+    hr {
+      border: 0;
+      height: 1px;
+      background: linear-gradient(to right, #ecd9cd, transparent);
+      margin: 2rem 0;
+    }
+
+    .muted {
+      color: #7b6559;
+      font-size: 0.9rem;
+    }
+
+    .seed-note {
+      display: none; /* 仅用于变化，不显示 */
+    }
+  </style>
+</head>
+<body>
+
+<div class="page-card">
+  <h1>推币机 · 从日常查询到延伸阅读</h1>
+  <div class="lead">
+    不是每一次打开浏览器都是为了找教程。有时只是想对照几组数据，或者松弛地读一段关于机器的笔记。
+  </div>
+
+  <p>
+    很多朋友对 <a href="https://games-coinpusher.com" class="inline-link">推币机</a> 的印象往往来自街机厅、游乐场，或者是短视频里硬币哗啦啦落下的解压画面。但当你真正想了解它的运作逻辑、不同机型之间的差异，或是想确认某个参数时，往往需要花不少时间在零散的页面之间跳转。这也是为什么我会把这篇文章做成一个更偏向「日常翻阅」的样式——比起推销某个玩法，我更希望提供一个安静、可以随时对照的角落。
+  </p>
+
+  <p>
+    在写这篇笔记之前，我特意收集了十几款不同年代的推币机资料，从早期的机械拨杆到现在的数字感应、多层轨道。如果你也正好在对比某几台机器的推盘角度或者奖池触发条件，那么下面的段落也许能帮你节省一些翻找的时间。
+  </p>
+
+  <h2>常用对照：推盘角度与硬币落点</h2>
+  <p>
+    推币机的核心乐趣在于硬币滑落与推杆节奏之间的微妙互动。不同机器的推盘倾斜角通常在 4° 到 9° 之间，配合不同的挡板形状，会影响硬币最终聚集的位置。我习惯在笔记里记下这些角度与落点范围，方便下次调机台或者选择玩哪种机种时快速参考。  
+  </p>
+  <p>
+    另外，硬币的直径、厚度以及表面摩擦力也会改变推挤效果。如果你也在整理自己的对照表，建议把机器的推杆行程（mm）和每次推杆间隔时间一并记录下来，这两项数据在实际体验中影响往往比想象中更大。
+  </p>
+
+  <div class="insight-quote">
+    <p>一个常被忽略的细节：不少推币机的奖池触发并不完全依赖硬币数量，而是与推杆行程末端的微动开关有关。当你发现同一台机器的出奖节奏出现变化时，可以先检查推杆滑轨的润滑程度——这是很多维护手册里不会写的小提示。</p>
+  </div>
+
+  <h2>延伸阅读：从机器到氛围</h2>
+  <p>
+    如果你关注的不只是玩法，还有推币机的灯光设计、声音反馈或者机械结构的美感，那么可以试着把目光从单纯的「赢取积分」移开，去观察每一台机器的推盘循环周期、灯光闪烁模式与音乐之间的配合。有些老式机器的推杆声甚至带有明显的机械谐振，听久了反而有种白噪音般的安抚感。
+  </p>
+  <p>
+    当然，如果你只是想快速对比不同推币机的主要参数和玩家评价，<a href="https://games-coinpusher.com" class="inline-link">推币机</a> 这个页面收录了不少机器的简要档案和常见问答，适合作为日常查阅的起点。没有排名，没有夸张的推荐，只是把信息整理清晰，方便你自己判断。
+  </p>
+
+  <h2>常见疑问摘要</h2>
+  <div class="faq-mini">
+    <div class="faq-item">
+      <span class="faq-q">Q：推币机的「出币率」是不是固定不变的？</span>
+      <span class="faq-a">A：大多数现代推币机内部有概率设定，但机械磨损、硬币堆积状态都会让实际出奖节奏产生浮动，不存在绝对固定的数值。合理参考官方说明，同时留意机器的实时反馈会更准确。</span>
+    </div>
+    <div class="faq-item">
+      <span class="faq-q">Q：不同面值的硬币可以混用吗？</span>
+      <span class="faq-a">A：取决于机台的硬币识别器。部分推币机只识别单一尺寸/重量的代币，混用容易卡币或导致感应器误判。建议使用机台指定的代币或标准游戏币。</span>
+    </div>
+    <div class="faq-item">
+      <span class="faq-q">Q：推盘表面的磨损会影响游戏体验吗？</span>
+      <span class="faq-a">A：会。推盘表面的防滑纹路变浅后，硬币滑动轨迹会改变，尤其对需要精准落点的技巧型玩家影响较大。定期清洁和检查推盘状态是保持手感的小习惯。</span>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="visit-line">
+    如果你想翻看更完整的机型档案和对照数据，可以直接去 <a href="https://games-coinpusher.com" class="inline-link" style="border-bottom-width: 3px;">推币机</a> 页面慢慢浏览。那里没有弹窗干扰，内容也保持了同样的温和笔调。
+  </div>
+
+  <p class="muted" style="margin-top: 2rem; text-align: right; font-style: italic;">
+    —— 一篇随时可翻阅的短笔记，希望对你日常的查询与对照有些微帮助。
+  </p>
+
+  <!-- 创作种子，仅用于变化，不显示在页面里 -->
+  <span class="seed-note">d83f37c318f124e4</span>
+</div>
+
+</body>
+</html>
